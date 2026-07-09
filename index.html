@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Όνειρος — Ο ονειροκρίτης που ακούει</title>
+<meta name="description" content="Μόλις ξυπνήσεις, διηγήσου το όνειρό σου. Ο Όνειρος το ερμηνεύει με τη ματιά της ελληνικής λαϊκής παράδοσης και το κάνει αστερισμό. Δωρεάν στο iPhone.">
+<meta property="og:title" content="Όνειρος — Ο ονειροκρίτης που ακούει">
+<meta property="og:description" content="Πες το όνειρό σου πριν προλάβει να φύγει. Ερμηνεία με λαϊκή παράδοση & λίγη ψυχολογία, σε μια κάρτα-αστερισμό.">
+<meta property="og:image" content="img/shot1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&subset=greek&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0a0f2c; --night2:#141b3f; --ink:#eef0fb; --dim:#aab1d6;
+  --gold:#f2c14e; --gold-soft:rgba(242,193,78,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:linear-gradient(180deg,#070b22 0%,var(--night) 40%,#1a2150 100%);
+  color:var(--ink);
+  font-family:"Noto Sans",-apple-system,"Helvetica Neue",sans-serif;
+  line-height:1.65; overflow-x:hidden;
+}
+h1,h2,.brand{font-family:"GFS Didot",Georgia,serif;font-weight:400}
+.sky{position:fixed;inset:0;pointer-events:none;z-index:0}
+.star{position:absolute;background:#fff;border-radius:50%;opacity:.7;animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25}50%{opacity:.85}}
+main{position:relative;z-index:1;max-width:1060px;margin:0 auto;padding:0 24px}
+.hero{text-align:center;padding:96px 0 56px}
+.moon{font-size:84px;filter:drop-shadow(0 0 34px rgba(242,193,78,.55));display:inline-block;animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+h1{font-size:clamp(52px,9vw,88px);letter-spacing:.02em;margin:18px 0 6px;color:#fff}
+.tag{font-size:clamp(19px,3vw,25px);color:var(--dim)}
+.pitch{max-width:640px;margin:26px auto 0;font-size:17px;color:var(--ink)}
+.badge{display:inline-block;margin-top:36px;padding:15px 34px;border-radius:999px;
+  background:var(--gold);color:#1c1503;font-weight:700;font-size:17px;text-decoration:none;
+  box-shadow:0 6px 30px var(--gold-soft)}
+.badge small{display:block;font-weight:400;font-size:12.5px;margin-top:1px}
+.shots{display:flex;gap:26px;justify-content:center;align-items:flex-start;padding:44px 0 20px;flex-wrap:wrap}
+.shots img{width:min(268px,78vw);border-radius:34px;border:1px solid rgba(242,193,78,.28);
+  box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.shots img:nth-child(2){transform:translateY(26px)}
+section.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;padding:64px 0 8px}
+.card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+  border-radius:20px;padding:26px 22px}
+.card .ic{font-size:30px}
+.card h3{font-size:17.5px;margin:10px 0 6px;color:#fff}
+.card p{font-size:14.5px;color:var(--dim)}
+.deep{margin:70px auto;max-width:720px;text-align:center;background:linear-gradient(160deg,rgba(242,193,78,.12),rgba(242,193,78,.03));
+  border:1px solid rgba(242,193,78,.3);border-radius:26px;padding:40px 30px}
+.deep h2{font-size:32px;color:var(--gold);margin-bottom:10px}
+.deep p{color:var(--ink);max-width:520px;margin:0 auto;font-size:16px}
+.deep .price{margin-top:14px;color:var(--dim);font-size:14.5px}
+footer{border-top:1px solid rgba(255,255,255,.1);margin-top:60px;padding:34px 0 46px;
+  text-align:center;color:var(--dim);font-size:14px}
+footer a{color:var(--gold);text-decoration:none}
+footer .en{margin-top:10px;font-size:12.5px;opacity:.75}
+</style>
+</head>
+<body>
+<div class="sky" id="sky"></div>
+<main>
+  <div class="hero">
+    <span class="moon">🌙</span>
+    <h1>Όνειρος</h1>
+    <p class="tag">Ο ονειροκρίτης που ακούει.</p>
+    <p class="pitch">Μόλις ξυπνήσεις, κράτα πατημένο το χρυσό αστέρι και διηγήσου το όνειρό σου —
+    πριν προλάβει να φύγει. Ο Όνειρος το ακούει, το ερμηνεύει με τη ματιά της ελληνικής
+    λαϊκής παράδοσης (και λίγη σύγχρονη ψυχολογία) και το κάνει <strong>αστερισμό</strong>.</p>
+    <a class="badge" href="#" id="appstore">Σύντομα στο App Store<small>για iPhone, δωρεάν</small></a>
+  </div>
+
+  <div class="shots">
+    <img src="img/shot2.jpg" alt="Ηχογράφηση ονείρου στον Όνειρο">
+    <img src="img/shot1.jpg" alt="Κάρτα-αστερισμός με τα σύμβολα του ονείρου">
+    <img src="img/shot3.jpg" alt="Η ερμηνεία του ονείρου στα ελληνικά">
+  </div>
+
+  <section class="feats">
+    <div class="card"><div class="ic">🎙️</div><h3>Μίλα, μην πληκτρολογείς</h3>
+      <p>Με μισοκοίμητη φωνή, στα ελληνικά. Η ηχογράφηση δεν αποθηκεύεται ποτέ.</p></div>
+    <div class="card"><div class="ic">📜</div><h3>Λαϊκή παράδοση</h3>
+      <p>Τα δόντια, το φίδι, οι πεθαμένοι, ο γάμος — όπως τα έλεγε η γιαγιά, με μια ήπια ψυχολογική ματιά.</p></div>
+    <div class="card"><div class="ic">🌌</div><h3>Κάρτα-αστερισμός</h3>
+      <p>Κάθε όνειρο γίνεται ένας μικρός ουρανός με τα σύμβολά του, έτοιμος για κοινοποίηση.</p></div>
+    <div class="card"><div class="ic">🔒</div><h3>Δικά σου τα όνειρα</h3>
+      <p>Χωρίς λογαριασμούς. Όλα μένουν στη συσκευή σου. <a href="privacy.html" style="color:var(--gold)">Πολιτική απορρήτου</a></p></div>
+  </section>
+
+  <div class="deep">
+    <h2>Βαθύς Ύπνος</h2>
+    <p>Απεριόριστες ερμηνείες και Βαθιά Ανάγνωση — τι λέει το όνειρο για την αγάπη,
+    τη δουλειά κι εσένα — συν τον πλήρη προσωπικό σου ουρανό από σύμβολα.</p>
+    <p class="price">Εφάπαξ αγορά 4,99 €. Χωρίς συνδρομές, ποτέ.</p>
+  </div>
+
+  <footer>
+    <p><a href="privacy.html">Πολιτική Απορρήτου / Privacy Policy</a> ·
+       <a href="mailto:andreas@bombinate.gr">Επικοινωνία</a></p>
+    <p style="margin-top:8px">© 2026 Bombinate · Φτιαγμένο στην Ελλάδα 🇬🇷</p>
+    <p class="en">Oneiros — a Greek, voice-first dream interpreter for iPhone.</p>
+  </footer>
+</main>
+<script>
+const sky=document.getElementById('sky');
+for(let i=0;i<140;i++){const s=document.createElement('div');s.className='star';
+const z=Math.random();s.style.width=s.style.height=(z*2.2+0.6)+'px';
+s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';
+s.style.animationDelay=(Math.random()*4)+'s';s.style.animationDuration=(3+Math.random()*4)+'s';
+sky.appendChild(s);}
+</script>
+</body>
+</html>
